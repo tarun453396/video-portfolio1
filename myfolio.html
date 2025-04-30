@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>[Your Name] | Video Editor Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tarun P | Video Editor Portfolio</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -12,28 +13,37 @@
       box-sizing: border-box;
     }
 
-    body {
+    html, body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(145deg, #0f0f0f, #1e1e1e);
-      color: #f0f0f0;
-      overflow-x: hidden;
+      color: #f2f2f2;
+      scroll-behavior: smooth;
+      background-color: #0f0f0f;
+    }
+
+    /* Video Background */
+    .bg-video {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.25);
     }
 
     header {
-      background: #111;
-      padding: 3rem 2rem;
       text-align: center;
-      animation: fadeInDown 1s ease-out;
+      padding: 5rem 2rem;
     }
 
     header h1 {
-      font-size: 3rem;
-      color: #00ffe1;
+      font-size: 3.5rem;
+      color: #00ffd5;
+      font-weight: 700;
     }
 
     header p {
       font-size: 1.2rem;
-      margin-top: 0.5rem;
       color: #ccc;
     }
 
@@ -41,13 +51,12 @@
       padding: 4rem 2rem;
       max-width: 1000px;
       margin: auto;
-      animation: fadeInUp 1s ease-in;
     }
 
     h2 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
+      color: #00ffd5;
       margin-bottom: 1rem;
-      color: #00ffe1;
       position: relative;
     }
 
@@ -56,132 +65,147 @@
       display: block;
       width: 60px;
       height: 3px;
-      background: #00ffe1;
-      margin-top: 8px;
-      border-radius: 5px;
+      background: #00ffd5;
+      margin-top: 6px;
+      border-radius: 3px;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #ddd;
     }
 
     .portfolio-item {
-      margin-bottom: 2.5rem;
-      background: #1a1a1a;
+      background: rgba(255, 255, 255, 0.05);
       padding: 1.5rem;
+      margin: 1.5rem 0;
       border-radius: 10px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease;
     }
 
     .portfolio-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 255, 225, 0.2);
+      transform: scale(1.02);
+      background-color: rgba(0, 255, 255, 0.07);
     }
 
     .portfolio-item a {
-      color: #00d9ff;
+      color: #00ffd5;
       text-decoration: none;
     }
 
-    .portfolio-item a:hover {
-      text-decoration: underline;
-    }
-
     .tools, .testimonials {
-      background: #222;
+      background-color: rgba(255, 255, 255, 0.03);
       padding: 2rem;
       margin-top: 2rem;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 255, 225, 0.05);
     }
 
-    .contact {
-      background: #111;
+    .contact, .download {
       text-align: center;
-      padding: 3rem 2rem;
-      animation: fadeInUp 1.2s ease-in;
+      padding: 2rem;
     }
 
-    .contact a {
-      color: #00d9ff;
+    .button {
+      display: inline-block;
+      padding: 12px 28px;
+      background: #00ffd5;
+      color: #000;
+      border-radius: 30px;
+      margin-top: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background: #0ff;
     }
 
     footer {
       text-align: center;
-      padding: 1.5rem;
-      background: #000;
+      padding: 2rem;
       color: #777;
       font-size: 0.9rem;
     }
 
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.5rem; }
+      h2 { font-size: 1.7rem; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>[Your Name]</h1>
+
+  <!-- Background Video -->
+  <video autoplay muted loop class="bg-video">
+    <source src="https://cdn.coverr.co/videos/coverr-editing-in-progress-3705/1080p.mp4" type="video/mp4">
+  </video>
+
+  <header data-aos="fade-down">
+    <h1>Tarun P</h1>
     <p>Professional Video Editor | Highlight Reels | Mass Editing | Social Media Content</p>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>I’m a freelance video editor specializing in high-impact edits, highlight reels, and mass content production. Whether you're an influencer, brand, or event planner—I deliver visually compelling edits that stand out.</p>
+  <section data-aos="fade-up">
+    <h2>Who am I?</h2>
+    <p>I craft cinematic edits—from highlight reels to volume-heavy content—for creators, agencies, and brands. I deliver fast, reliable, visually sharp work that captures your story and audience.</p>
   </section>
 
-  <section>
+  <section data-aos="fade-up">
+    <h2>What I Serve</h2>
+    <p>Specialized in high-impact video edits, event aftermovies, reels, vlogs, and mass influencer content. If you're looking to stand out online—I’ve got the timeline magic.</p>
+  </section>
+
+  <section data-aos="fade-up">
     <h2>Portfolio</h2>
     <div class="portfolio-item">
-      <strong>Highlight Reel – Football Match</strong><br>
+      <strong>Football Match – Highlight Reel</strong><br>
       <a href="#">Watch Here</a>
     </div>
     <div class="portfolio-item">
-      <strong>Mass Editing – 30+ Influencer Videos</strong><br>
+      <strong>30+ Influencer Videos – Mass Edits</strong><br>
       <a href="#">Watch Here</a>
     </div>
     <div class="portfolio-item">
-      <strong>Product Promo – Social Media Ad</strong><br>
+      <strong>Product Promo – Instagram Ad</strong><br>
       <a href="#">Watch Here</a>
     </div>
     <div class="portfolio-item">
-      <strong>Event Aftermovie – Wedding</strong><br>
+      <strong>Wedding Aftermovie</strong><br>
       <a href="#">Watch Here</a>
     </div>
   </section>
 
-  <section class="tools">
+  <section class="tools" data-aos="fade-right">
     <h2>Tools I Use</h2>
-    <p>Adobe Premiere Pro, After Effects, Final Cut Pro, DaVinci Resolve, CapCut, VN</p>
+    <p>Premiere Pro, After Effects, Final Cut Pro, DaVinci Resolve, CapCut, VN Editor</p>
   </section>
 
-  <section class="testimonials">
+  <section class="testimonials" data-aos="fade-left">
     <h2>Client Testimonials</h2>
-    <p><em>"Amazing editing – fast, reliable, and really captured the energy I wanted."</em><br>— Influencer</p>
-    <p><em>"He handled 50+ videos with precision. Great quality & communication."</em><br>— Content Agency</p>
+    <p><em>"Captured the vibe perfectly. Super fast and professional!"</em><br>— Influencer</p>
+    <p><em>"Handled 50+ videos with precision. Great quality & communication."</em><br>— Agency Manager</p>
   </section>
 
-  <section class="contact">
+  <section class="download" data-aos="fade-up">
+    <h2>Download My Resume</h2>
+    <a href="#" class="button">Download PDF</a>
+  </section>
+
+  <section class="contact" data-aos="fade-up">
     <h2>Let’s Work Together</h2>
-    <p>Email: your@email.com<br>WhatsApp: +1234567890<br><a href="#">Download Full Portfolio</a></p>
+    <p>Fill out the contact form to start a project with me!</p>
+    <a href="#" class="button">Open Contact Form</a>
   </section>
 
   <footer>
-    &copy; 2025 [Your Name] | Video Editing Portfolio
+    &copy; 2025 Tarun P | All Rights Reserved
   </footer>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
