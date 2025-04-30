@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Your Name] | Video Editor Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(145deg, #0f0f0f, #1e1e1e);
+      color: #f0f0f0;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #111;
+      padding: 3rem 2rem;
+      text-align: center;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #00ffe1;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      color: #ccc;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeInUp 1s ease-in;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #00ffe1;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #00ffe1;
+      margin-top: 8px;
+      border-radius: 5px;
+    }
+
+    .portfolio-item {
+      margin-bottom: 2.5rem;
+      background: #1a1a1a;
+      padding: 1.5rem;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 255, 225, 0.2);
+    }
+
+    .portfolio-item a {
+      color: #00d9ff;
+      text-decoration: none;
+    }
+
+    .portfolio-item a:hover {
+      text-decoration: underline;
+    }
+
+    .tools, .testimonials {
+      background: #222;
+      padding: 2rem;
+      margin-top: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 255, 225, 0.05);
+    }
+
+    .contact {
+      background: #111;
+      text-align: center;
+      padding: 3rem 2rem;
+      animation: fadeInUp 1.2s ease-in;
+    }
+
+    .contact a {
+      color: #00d9ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #000;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>[Your Name]</h1>
+    <p>Professional Video Editor | Highlight Reels | Mass Editing | Social Media Content</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>I’m a freelance video editor specializing in high-impact edits, highlight reels, and mass content production. Whether you're an influencer, brand, or event planner—I deliver visually compelling edits that stand out.</p>
+  </section>
+
+  <section>
+    <h2>Portfolio</h2>
+    <div class="portfolio-item">
+      <strong>Highlight Reel – Football Match</strong><br>
+      <a href="#">Watch Here</a>
+    </div>
+    <div class="portfolio-item">
+      <strong>Mass Editing – 30+ Influencer Videos</strong><br>
+      <a href="#">Watch Here</a>
+    </div>
+    <div class="portfolio-item">
+      <strong>Product Promo – Social Media Ad</strong><br>
+      <a href="#">Watch Here</a>
+    </div>
+    <div class="portfolio-item">
+      <strong>Event Aftermovie – Wedding</strong><br>
+      <a href="#">Watch Here</a>
+    </div>
+  </section>
+
+  <section class="tools">
+    <h2>Tools I Use</h2>
+    <p>Adobe Premiere Pro, After Effects, Final Cut Pro, DaVinci Resolve, CapCut, VN</p>
+  </section>
+
+  <section class="testimonials">
+    <h2>Client Testimonials</h2>
+    <p><em>"Amazing editing – fast, reliable, and really captured the energy I wanted."</em><br>— Influencer</p>
+    <p><em>"He handled 50+ videos with precision. Great quality & communication."</em><br>— Content Agency</p>
+  </section>
+
+  <section class="contact">
+    <h2>Let’s Work Together</h2>
+    <p>Email: your@email.com<br>WhatsApp: +1234567890<br><a href="#">Download Full Portfolio</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 [Your Name] | Video Editing Portfolio
+  </footer>
+</body>
+</html>
